@@ -31,7 +31,7 @@ browser.button(value: 'Submit').click
 # Fill in CRNs
 CRNS.each_with_index |crn, index| do
 	
-	browser.text_field(id: "crn_id#{index}").set crn
+	browser.text_field(id: "crn_id#{index + 1}").set crn
 end
 
 # Click submit
