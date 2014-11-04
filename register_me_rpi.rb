@@ -29,5 +29,10 @@ browser.goto 'https://sis.rpi.edu/rss/bwskfreg.P_AltPin'
 browser.button(value: 'Submit').click
 
 # Fill in CRNs
+CRNS.each_with_index |crn, index| do
+	
+	browser.text_field(id: "crn_id#{index}").set crn
+end
 
 # Click submit
+browser.button(value: 'Submit Changes').click
